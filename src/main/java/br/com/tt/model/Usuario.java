@@ -14,4 +14,8 @@ public class Usuario {
         }
         nome = novoNome;
     }
+
+    public String getNome() {
+        return nome;
+    }
 }

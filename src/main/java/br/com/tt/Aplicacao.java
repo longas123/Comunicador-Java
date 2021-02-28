@@ -37,7 +37,8 @@ public class Aplicacao {
     private static void perguntarMensagem(){
         System.out.println("Informe sua mensagem: ");
         String texto = new Scanner(System.in).nextLine();
-        listaMsgs[indiceMensagens++] = new Mensagem(texto);
+        Usuario usuarioLogado = usuarios[0];
+        listaMsgs[indiceMensagens++] = new Mensagem(texto, usuarioLogado);
     }
 
     private static  void listarMensagens(){
@@ -45,7 +46,7 @@ public class Aplicacao {
             if (msg == null){
                 break;
             }
-            System.out.printf("%s\n", msg.getTexto());
+            System.out.print(msg.getDescricao());
         }
     }
 
